@@ -1,0 +1,87 @@
+note1)
+
+package JavaPattern;
+
+public class Practicepattern1 {
+
+	public static void main(String[] args) {
+          int n=5;
+          char ch='A';
+          for(int i=1;i<=n;i++)
+          {
+        	  for(int k=1;k<=n-i+1;k++)
+        	  {
+        		  System.out.print("-"+" ");
+        	  }
+        	  for(int j=1;j<=2*i-1;j++)
+        	  {
+        		  System.out.print(ch+" ");
+        		  
+        	  }
+        	  System.out.println();
+        //	  ch++;
+          }
+          
+	}
+
+}
+by using ch++ the pattern changes from    
+
+- - - - - A 
+- - - - A A A 
+- - - A A A A A 
+- - A A A A A A A 
+- A A A A A A A A A     
+
+                                                 
+ - - - - - A 
+- - - - B B B                 (by using ch++ at the end or incremented the value makes the value incremented by 1)
+- - - C C C C C 
+- - D D D D D D D 
+- E E E E E E E E E 
+
+note 2)
+
+ for(int i=1;i<=n;i++)
+          {
+        	  for(int j=1;j<=i;j++)
+        	  {
+        		  System.out.print(ch+" ");
+        		  ch++;
+        	  }
+        	  System.out.println();
+          }
+	}
+}
+
+output:
+A 
+B C 
+D E F 
+G H I J 
+K L M N O 
+
+
+note3)
+
+for(int i=1;i<=n;i++)
+          {
+        	  ch='A';
+        	  for(int j=1;j<=i;j++)
+        	  {
+        		  System.out.print(ch+" ");
+        		  ch++;
+        	  }
+        	  System.out.println();
+          }
+	}
+}
+
+
+output:
+
+A 
+A B 
+A B C 
+A B C D 
+A B C D E 
